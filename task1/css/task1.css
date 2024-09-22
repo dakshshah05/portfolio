@@ -1,0 +1,362 @@
+body {
+    margin: 0;
+    display: block;
+    width: auto;
+    height: 100vh;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../img/backg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    filter: blur(5px);
+    z-index: -1;
+}
+span{
+    color: rgba(226, 250, 91, 0.747);
+    text-shadow: 0vh 0vh 2vh rgba(224, 255, 48, 0.452);
+}
+.Out{
+    z-index: 10;
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+    text-align: end;
+    margin-top: 10px;
+    margin-right: 10px;
+    position: absolute;
+    top: 15px;
+    right: 5px;
+    cursor: pointer;
+}
+.Out:hover{
+    text-shadow: 0vh 0vh 0vh rgb(255, 0, 0);
+}
+nav{
+    z-index: 1;
+    position: fixed;
+    width: 100%;
+}
+.navi{
+    text-align: center;
+    background-color: rgba(229, 255, 0, 0.2);
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 15px 0px 15px;
+    height: 5vh;
+    backdrop-filter: blur(15px);
+    position: relative;
+}
+.navi nav a{ 
+    text-align: center;
+    padding: 10px 40px 10px 40px;
+    color: rgb(211, 211, 211);
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+.navi nav a:hover{
+    transform: scale(1.2);
+    color: white;
+    transition: 0.3s ease;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+    border-bottom: 2px  solid rgb(255, 251, 0);
+}
+.Home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Home h1{
+    font-size: 70px;
+    color: white;
+    margin-bottom: 40px;
+    text-shadow: 0 0 10px rgb(208, 212, 210);
+    animation: slideIn 1s forwards;
+    opacity: 0;
+    transform: translateX(-100%);
+}
+.Home h1:hover{
+    text-shadow: 0 0 50px rgb(207, 219, 33);
+}
+.Home p{
+    font-size: 35px;
+    color: aliceblue;
+    text-shadow: 0 0 5px rgb(212, 212, 208);
+    animation-delay: 0.5s;
+    animation: slideIn 1s forwards;
+    transform: translateX(100%);
+    opacity: 0;
+}
+.Home p:hover{
+    text-shadow: 0 0 50px rgb(179, 219, 33);
+}
+@keyframes slideIn{
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#About, #Home, #Qualification, #Experience, #Skills, #Contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+}
+.About{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70%;
+    background-color: rgba(230, 219, 61, 0.129);
+    padding: 7vh;
+    border: 0.5vh solid rgba(140, 148, 28, 0.129);
+    border-radius: 8vh;
+    gap: 10vh;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: white;
+}
+.About h1{
+    font-size: 50px;
+}
+.About p{
+    font-size: 30px;
+}
+.About:hover{
+    box-shadow: 0 0 2vh rgb(179, 219, 33);
+    scale: 1.05;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.About img{
+    border-radius: 10px;
+}
+.About img:hover{
+    scale: 1.1;
+    transform: rotate(-7deg);
+    transition: 3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    box-shadow: 0 0 2vh rgb(179, 219, 33);
+}
+hr{
+    width: 60%;
+    border: none;
+    height: 2px;
+    background-color: white;
+    box-shadow: 0 0 10px 1px #ffffff,0 0 16px 2px rgb(255, 251, 0) , 0 0 22px 3px rgb(229, 255, 0);
+}
+#Qualification {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 70vh;
+}
+.qhead h1{
+    font-size: 50px;
+    color: white;
+    text-shadow: 0vh 0vh 2vh rgb(255, 255, 255);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.qual{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 50px;
+    width: 50%;
+    height: 40vh;
+    background-image: radial-gradient(rgba(240, 213, 93, 0.2),rgba(200, 219, 33, 0.2));
+    border: 2px solid rgba(255, 230, 0, 0.2);
+    border-radius: 30px;
+    box-shadow: 0vh 0vh 2vh rgba(255, 255, 255, 0.5);
+}
+.qual:hover{
+    transform: scale(1.05);
+    transition: 3s ease-in-out;
+}
+.PUC {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.PUC-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.PUC:hover .PUC-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0vh 0vh 2vh rgb(179, 219, 33);
+    border-radius: 50px;
+}
+
+.PUC-front, .PUC-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.PUC-front {
+    background-image: radial-gradient(rgba(255, 237, 132, 0.2), rgba(238, 255, 4, 0.2));
+}
+
+.PUC-back {
+    background-image: radial-gradient(rgba(255, 237, 132, 0.2), rgba(238, 255, 4, 0.2));
+    transform: rotateY(180deg);
+}
+.SSLC {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.SSLC-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.SSLC:hover .SSLC-inner {
+    transform: rotateY(180deg);
+    box-shadow: 0vh 0vh 2vh rgb(179, 219, 33);
+    border-radius: 50px;
+}
+
+.SSLC-front, .SSLC-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+}
+
+.SSLC-front {
+    background-image: radial-gradient(rgba(255, 237, 132, 0.2), rgba(238, 255, 4, 0.2));
+}
+
+.SSLC-back {
+    background-image: radial-gradient(rgba(255, 237, 132, 0.2), rgba(238, 255, 4, 0.2));
+    transform: rotateY(180deg);
+}
+
+.PUC h1{
+    color: white;
+    font-size: 30px;
+    text-shadow: 0vh 0vh 2vh rgb(255, 255, 255);
+}
+.SSLC h1{
+    color: white;
+    font-size: 30px;
+    text-shadow: 0vh 0vh 2vh rgb(255, 255, 255);
+}
+.Skills{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    justify-content: space-evenly;
+    width: 100%;
+    align-content: center;
+    
+}
+.Skills h1{
+    font-size: 35px;
+    font-family: cursive;
+    text-align: center;
+}
+.Skills td{
+    padding: 15px;
+    font-size: 20px;
+}
+.Skills table{
+    border-style: solid;
+    border-color: white;
+    border-collapse: collapse;
+    position: relative;
+    padding: -10px;
+}
+.Softskills:hover{
+    transform: scale(1.1);
+    box-shadow: 1vh 1vh 2vh rgb(255, 197, 38);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(-2deg);
+}
+.Hardskills:hover{
+    transform: scale(1.1);
+    box-shadow: 1vh 1vh 2vh rgb(238, 235, 38);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(2deg);
+}
+.Interests:hover{
+    transform: scale(1.1);
+    box-shadow: 1vh 1vh 2vh rgb(234, 255, 40);
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(-2deg);
+}
+.Skills table::before{
+    backdrop-filter: blur(80px);
+}
+tr:hover , td:hover{
+    transform: scale(1.1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.Skills h1:hover{
+    transform: scale(1.1);
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+}
+#Contact{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: left;
+    text-align: left    ;
+    width: 100%;
+    height: 15vh;
+    color: white;
+    background-color: rgba(229, 255, 0, 0.2);
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 20px;
+    backdrop-filter: blur(15px);
+}
+#Contact div {
+    margin-left: 10px;
+}
+#Contact a{
+    color: rgb(3, 247, 255);
+    text-decoration: none;
+}

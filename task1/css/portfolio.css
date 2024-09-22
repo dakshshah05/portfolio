@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../img/lgbg.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    margin: 0;
+    display: block;
+    width: auto;
+    height: 100vh;
+    position: relative;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+#Sec1{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2vh 1vh 2vh #ffd000;
+    background-color: #f1cf119f;
+    width: 500px;
+    padding: 10px;
+    border-radius: 20px;
+    margin: 100px auto;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    margin: 200px auto;
+    padding: 20px;
+    background-color: #fafca179;
+    border: 1px solid #020202;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 30px;
+}
+.form:hover{
+    transform: scale(1.1);
+    transition: 3s cubic-bezier(0.165, 0.84, 0.44, 1) ;
+    box-shadow: 2vh 2vh 2vh#000000;
+}
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #f1d011;
+    border-radius: 15px;
+}
+
+input[type="button"] {
+    width: 100%;
+    height: 40px;
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: #10e017;
+    transform: scale(1.1 );
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+label[class="name"]:hover{
+    transform: scale(1.1 );
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+label[class="password"]:hover{
+    transform: scale(1.1 );
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+input[type="text"]:hover {
+    background-color: #d9f53b2f;
+    transform: scale(1.1 );
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(-3deg);
+}
+input[type="password"]:hover {
+    background-color: #e9f53b2f;
+    transform: scale(1.1 );
+    transition: 2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transform: rotate(3deg);
+}
+input[type="checkbox"]{
+    margin-bottom: 10px;
+}
