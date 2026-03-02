@@ -5,7 +5,7 @@ import { useCallback, useRef } from "react";
  * Characters cycle through random symbols before settling on the final text.
  */
 export function useTextScramble() {
-  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+  const intervalRef = useRef<any>(null);
 
   const scramble = useCallback(
     (
